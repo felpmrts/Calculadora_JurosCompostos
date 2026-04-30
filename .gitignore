@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# CPython cache
+**/*.pyc
+
+# Ambientes virtuais (caso você crie um)
+venv/
+env/
+.venv/
+
+# Distribuição / Executáveis (PyInstaller)
+dist/
+build/
+*.spec
+
+# Configurações de IDE (VS Code)
+.vscode/
+
+# Arquivos do Sistema
+.DS_Store
+Thumbs.db

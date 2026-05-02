@@ -1,5 +1,3 @@
-# Juros Compostos Formula
-
 def juros_compostos(lista_resultado, capital_inicial, aporte_mensal, tjuros_anual, tempo_anos):
     meses = int(tempo_anos * 12)
     taxa_mensal = (1 + tjuros_anual/100)**(1/12) - 1

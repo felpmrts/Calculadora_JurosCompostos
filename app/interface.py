@@ -30,7 +30,7 @@ def clear_screen():
 
 def exibir_tabela_evolucao(lista_resultado):
 
-    # Cabeçalho da Tabela
+    
     print(f"\n{'Mês':<4} | {'Renda Mensal':>18} | {'Total Invest.':>18} | {'Juros Acum.':>18} | {'Total Acum.':>18}")
     print("-" * 90)
 
@@ -41,7 +41,6 @@ def exibir_tabela_evolucao(lista_resultado):
         total_juros = item['total_juros_ate_aqui']
         saldo = item['saldo_acumulado']
 
-        # Formatando cada linha
         print(f"{mes:<4} | R$ {renda:>15,.2f} | R$ {total_investido:>15,.2f} | R$ {total_juros:>15,.2f} | R$ {saldo:>15,.2f}")
 
     print("-" * 90 + "\n")
@@ -69,14 +68,14 @@ def gerar_arquivoTXT(lista_resultado):
 # Menu function
 
 def menu():
-    executando = True  # Definimos antes do loop
+    executando = True  
     
     while executando:
         clear_screen()
         lista_resultado = []
 
         try:
-            # Entrada de dados com tratamento básico
+            
             print(f"=== Digite o seu patrimônio inicial ===")
             patrimonio_inicial = float(input(">> R$ "))
 
@@ -102,7 +101,6 @@ def menu():
 
         clear_screen()
         
-        # Loop de confirmação dos dados
         while True:
             print(f"VALORES DIGITADOS:")
             print(f"Início: R$ {patrimonio_inicial} | Aporte: R$ {aporte_mensal} | Juros: {tjuros_anual}% | Tempo: {periodo_anual} anos")
@@ -111,7 +109,7 @@ def menu():
         
             if confirmacao == 's':
                 clear_screen()
-                # Chama o cálculo
+                
                 calculos.juros_compostos(lista_resultado, patrimonio_inicial, aporte_mensal, tjuros_anual, periodo_anual)
                 exibir_tabela_evolucao(lista_resultado)
                 
@@ -127,18 +125,18 @@ def menu():
                     print("Relatório gerado com sucesso!")
                     time.sleep(3)
                 
-                # Pergunta se quer nova simulação
+                
                 clear_screen()
                 print("Você deseja fazer uma nova simulação? (s/n): ")
                 nova_simulacao = input(">> ").lower()
                 if nova_simulacao != 's':
-                    executando = False # Encerra o loop principal
+                    executando = False 
 
-                break # Sai do loop de confirmação
+                break 
             elif confirmacao == 'n':
                 print("\nReiniciando preenchimento...")
                 time.sleep(2)
-                break # Sai do loop de confirmação para repetir o preenchimento
+                break 
             else:
                 print("[Erro] Digite apenas 's' ou 'n'.")
                 time.sleep(1)

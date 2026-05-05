@@ -8,6 +8,8 @@ As an Information Systems student passionate about the intersection of technolog
 
 This project serves as a practical application of Python fundamentals, bridging the gap between mathematical logic and software engineering. It was built with a focus on clean code, modular architecture, and user experience within the terminal.
 
+![alt text](demonstration.gif)
+
 ## 🎯 What the Project Does
 
 The **Compound Interest Calculator** empowers users to project their financial future. Instead of just returning a final number, the application acts as an analytical tool that:
